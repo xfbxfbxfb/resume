@@ -18,24 +18,6 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<style>
-			.jumbotron {
-				text-align: center;
-				padding-top: 350px;
-				padding-bottom: 300px;
-				background: url(img/header-image/header-bg2.jpg);
-				/*padding-top: 15px;
-				padding-bottom: 15px;
-				margin-bottom: 15px;*/
-			}
-			
-			.container-fluid .jumbotron {
-				padding-right: 22px;
-				padding-left: 12px;
-			}
-			
-			.jumbotron h1 {
-				font-size: 42px;
-			}
 			/*导航*/
 			
 			.navbar-brand {
@@ -89,39 +71,106 @@
 				background: url(img/mute.png) left center no-repeat;
 				display: none;
 			}
+			/*轮播*/
+			
+			.lunbo {
+				position: relative;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				width: 1300px;
+				height: 600px;
+			}
+			
+			#lunbobox {
+				width: 1300px;
+				height: 600px;
+				/*position: absolute;*/
+				z-index: 5;
+			}
+			
+			#lunbobox img {
+				width: 1300px;
+				height: 600px;
+				position: absolute;
+			}
+			
+			.tocenter {
+				width: 600px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				/*top: 100px;
+		   	left: 550px;*/
+				z-index: 99;
+			}
+			.tocenter img{
+				position: absolute;
+				left: 210px;
+			}
+			.tocenter h1{
+				position: absolute;
+				left: 210px;
+				top: 200px;
+			}
+			#zi{
+				position: absolute;
+				left: 100px;
+				top: 270px;
+			}
+			#link1{
+			position: absolute;
+				left: 260px;
+				top: 330px;	
+				
+			}
 		</style>
-		<script>
-			$(function() {
-				$("#on").click(function() {
-					$("#bgmMusic").get(0).pause();
-				});
-				$("#on").dblclick(function() {
-					$("#bgmMusic").get(0).play();
-				});
-			});
-		</script>
 
 	</head>
-	<style type="text/css">
-
-	</style>
+		
 
 	<body>
 		<audio id="bgmMusic" src="1.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
 		<div class="mPower"><span id="on" title="点击暂停" style=""></span><span id="off" title="点击播放" style=""></span></div>
-		<!--首页淡入淡出图-->
+		首页淡入淡出图-->
 		<div class="container-fluid">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%">
-				<div class="jumbotron">
-					<font color="white">
-						<img src="img/1.bmp" alt="..." class="img-circle" id="top">
-						<h1>我叫肖芳波</h1>
-						<p>毕业于桂林电子科技大学信息科技学院机电系,乐于尝试新技术,学习能力强!</p>
-					</font>
-					<p><a class="btn btn-primary btn-lg" href="#link" role="button" id="music">联系我</a></p>
+		<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" >
+		<div class="lunbo">
 
-				</div>
+			<div class="tocenter">
+				<font color="white">
+					<img src="img/1.bmp" alt="..." class="img-circle" id="top">
+					<h1>我叫肖芳波</h1>
+					<p id="zi">毕业于桂林电子科技大学信息科技学院机电系,
+						<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乐于尝试新技术,学习能力强! </p>
+					
+				</font>
+				<p><a class="btn btn-primary btn-lg" href="#link" role="button" id="link1">联系我</a></p>
+
 			</div>
+			<div id="lunbobox">
+				<a href="#">
+					<img src="img/header-image/header-bg1.jpg">
+				</a>
+				<a href="#">
+					<img src="img/header-image/header-bg2.jpg">
+				</a>
+				<a href="#">
+					<img src="img/header-image/header-bg3.jpg">
+				</a>
+				<a href="#">
+					<img src="img/header-image/header-bg4.jpg">
+				</a>
+			</div>
+		</div>
+		</div>
 		</div>
 
 		<!--导航-->
@@ -174,7 +223,7 @@
 					<i><b>机器人研究中心</b> </i>实验室录取了。然而实验室的指导老师要求我们要在暑假 进行严酷的培训java.那段时间虽然非常痛苦,但让我遇见了java的强大,从此我便沉浸于java。从第一次输出Hello,Word!,到现在 写的网页。
 				</p>
 				<p>
-					java到现在我已学完java各种集合,多态,线程,接口,TCP/IP,网络编程,泛型等等,在Web前端,我学会了Html,css ,js,jquery,Bootstrap等,现在正在学html5,css3, github等。当然,我在实验不仅仅学了这些, 我还自学了Eduis视频处理,PS图像处理,搭建 <a href="https://xfbxfbxfb.github.io/">个人博客</a>(里面也没写什么😂) ...课外还尝试自学吉他。 这些都是在我保证不耽误我学本专业的情况下的。
+					java到现在我已学完java各种集合,多态,线程,接口,TCP/IP,网络编程,泛型等等,在java前端,我学会了Html,css ,js,jquery,Bootstrap等,现在正在学html5,css3, github等。当然,我在实验不仅仅学了这些, 我还自学了Eduis视频处理,PS图像处理,搭建 <a href="https://xfbxfbxfb.github.io/">个人博客</a>(里面也没写什么😂) ...课外还尝试自学吉他。 这些都是在我保证不耽误我学本专业的情况下的。
 				</p>
 
 				<p>
@@ -328,11 +377,12 @@
 			<div class="container">
 
 				<div align="center">
+
 					<p>评论区 </p>
-						
-						<textarea cols="25px">
+
+					<textarea cols="30px">
 					</textarea>
-	
+
 					<br />
 					<font color="gray">@波哥制作2018年6月24号版权所有 </font>
 
@@ -341,5 +391,20 @@
 			</div>
 
 	</body>
+	<script>
+		$(function(){
+			var index = 0 ;
+			setInterval(play,3000);
+			function play(){
+				index ++;
+				if(index>3){
+					index=0;
+				}
+				$("#lunbobox a").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+				
+			}
+		})
+		
+	</script>
 
 </html>
