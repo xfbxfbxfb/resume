@@ -393,6 +393,7 @@
 	</body>
 	<script>
 		$(function(){
+//			轮播图
 			var index = 0 ;
 			setInterval(play,3000);
 			function play(){
@@ -404,6 +405,14 @@
 				
 			}
 		})
+		$(function() {
+				$("#on").click(function() {
+					$("#bgmMusic").get(0).pause();
+				});
+				$("#on").dblclick(function() {
+					$("#bgmMusic").get(0).play();
+				});
+			});
 		
 	</script>
 
