@@ -18,6 +18,15 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<style>
+			/*将轮播图进行屏幕适应*/
+			@media (max-width: 640px) {
+			#all{
+				width: 640px;
+			}	
+				
+			}
+			
+			
 			/*导航*/
 			
 			.navbar-brand {
@@ -74,26 +83,27 @@
 			/*轮播*/
 			
 			.lunbo {
+				padding-top: 30px;
 				position: relative;
 				left: 0;
 				top: 0;
 				bottom: 0;
 				right: 0;
 				margin: auto;
-				width: 1300px;
-				height: 600px;
+				width: 100%;
+				height: 700px;
 			}
 			
 			#lunbobox {
-				width: 1300px;
-				height: 600px;
+				width:100%;
+				height: 700px;
 				/*position: absolute;*/
 				z-index: 5;
 			}
 			
 			#lunbobox img {
-				width: 1300px;
-				height: 600px;
+				width: 100%;
+				height: 700px;
 				position: absolute;
 			}
 			
@@ -138,9 +148,9 @@
 	<body>
 		<audio id="bgmMusic" src="1.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
 		<div class="mPower"><span id="on" title="点击暂停" style=""></span><span id="off" title="点击播放" style=""></span></div>
-		首页淡入淡出图-->
-		<div class="container-fluid">
-		<div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" >
+		<!--首页淡入淡出图-->-->
+		<div class="container-fluid" id="all">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container">
 		<div class="lunbo">
 
 			<div class="tocenter">
@@ -413,7 +423,6 @@
 					$("#bgmMusic").get(0).play();
 				});
 			});
-		
 	</script>
 
 </html>
